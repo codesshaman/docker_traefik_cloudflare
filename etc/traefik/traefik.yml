@@ -37,7 +37,7 @@ providers:
 certificatesResolvers:
   le:
     acme:
-      email: nicksemail@yandex.ru
+      email: youur@email.ru
       storage: /etc/traefik/acme.json
       dnsChallenge:
         provider: cloudflare
