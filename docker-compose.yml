@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  traefik:
+    image: "traefik:v2.8"
+    container_name: "traefik"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    environment:
+      - CF_API_EMAIL=nicksemail@yandex.ru
+      - CF_API_KEY=5376405c219359f1502e50cb02e4020a82f14
+      - CF_DNS_API_TOKEN=QDgLOcAAPIVk4Ycx6jzHl9C6y-7M4UkL4VXjsxqQ
+      - CF_ZONE_API_TOKEN=q4t9FSO_rXl9yJbaeMBeV9iIQVWERcL6q_qxe1iH
+    volumes:
+
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /etc/traefik/acme.json:/etc/traefik/acme.json
+#      - /etc/traefik:/etc/traefik
