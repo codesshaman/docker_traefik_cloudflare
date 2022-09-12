@@ -18,8 +18,9 @@ entryPoints:
     http:
       tls:
         certResolver: le
+# Change this port or use subdomain!
   traefik:
-    address: :57127/tcp
+    address: :8080/tcp
 
 providers:
   file:
