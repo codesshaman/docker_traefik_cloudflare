@@ -10,9 +10,9 @@ services:
       - "8080:8080"
     environment:
       - CF_API_EMAIL=your@email.ru
-      - CF_API_KEY=cf_api_key
-      - CF_DNS_API_TOKEN=-7M4UkL4VXjsxqQ
-      - CF_ZONE_API_TOKEN=вапв
+      - CF_API_KEY=cf_global_api_key
+      - CF_DNS_API_TOKEN=-Zone.DNS:Edit
+      - CF_ZONE_API_TOKEN=Zone:Read
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
